@@ -19,13 +19,13 @@ interface ApiService {
     @GET("users/")
     suspend fun getUsers(): List<User>
 
-    @POST("users/{user_id}/posts")
+    @POST("users/{user_id}/posts/")
     suspend fun createPost(
         @Path("user_id") userId: Int,
         @Body post: CreatePostRequest
     ): Post
 
-    @GET("posts/{user_id}/posts")
+    @GET("posts/{user_id}/posts/")
     suspend fun getPosts(@Path("user_id") userId: Int): List<Post>
 
     @PUT("posts/{post_id}")

@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.apppost1"
-        minSdk = 35
+        minSdk = 33
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -67,6 +67,7 @@ dependencies {
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.45")
+    implementation(libs.androidx.navigation.compose)
     kapt("com.google.dagger:hilt-android-compiler:2.45")
 
     // Lifecycle
